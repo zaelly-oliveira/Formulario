@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="image/png" href="/assets/invader-solid-24.png"/> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://unpkg.com/jwt-decode/build/jwt-decode.js"></script>
+  
+    <link href="./assets/style.css" rel="stylesheet" type="text/css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bem vindo</h2>
+                <p>Não possui uma conta ainda? clique aqui!</p>
+                <button class="sign-up-btn">Cadastre-se</button>
+            </div>
+        </div>
+        <form class="formulario" action="system.php" method="POST" id="formLogin">
+            <h2 class="create-account">Iniciar sessão</h2>
+            <div class="icones">
+                <div id="buttonDiv" class="icon border-icon">
+                    <div id="g_id_onload"
+                    data-client_id="195425938133-8v67o5h10152ol0bkkgvqsnfb9uupjsn.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-callback="handleCredentialResponse"
+                    data-itp_support="true">
+               </div>
+               
+               <div class="g_id_signin"
+                    data-type="icon"
+                    data-shape="circle"
+                    data-theme="filled_black"
+                    data-text="continue_with"
+                    data-size="large">
+               </div>
+                </div> 
+                <div class="border-icon" >    
+                    <i class="ic"><img src="assets/instagram-icone-icon-5.png"  class="icon"></i>   
+                </div>
+                <div class="border-icon " >
+                    <i class="ic"><img src="assets/icon-face.png" class="icon"></i>
+                </div>
+            </div>
+            <p class="conta-gratis">Login</p>
+            <div class="inputbox">
+                <input id="userName" type="text" name="user" placeholder="Usuário" required/>
+            </div>
+            <div class="input-container inputbox">
+                <input id="password" type="password" name="senha" placeholder="Senha" required/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWdJREFUSEvtlP8xBEEUhL+LABEgAkSACMgAEZABIkAEyMBFgAgQATIQgvrOG/V2btZeqdr/bqq29sfMdvfr1zMTRh6TkfFZEgw6PGTRKnAAHAM+bwfiK/AF3AHTeG6S9REIdgpcDEr8WeC6mxZRi0Dwx6T2HniK6yMIN4C9uI5SVfs1SU0g+HvY8RbWaMdfQ9u0agtwbYekJlDpLiC4CvXZIfEVcAhsNqxw3n8l8S7JbGQCG3kLfIY9Bdx1KixWrPU0VRIrWAdO4p8Ogf52JpMvkq3EuwoF8FsW4XQRKZaV/oug8Fqpzc4juzCba1kk+06lzhieV2CXVYy16CVImxb5f2nyXBoCTIWlJ3mP5Gg/R0DmmlzSUhrlXSWLxNRwGNc6fc3TNEeuqLUyleWNZpyNcqlqDrzuQbZYkrOG730bzn5cL3pU1ERurnLYuZEcqrWah7jquP5iDJ2mfYoX/r4kGLRqdIu+AXh7VBkMPcgnAAAAAElFTkSuQmCC"
+                onclick="showPassword();" onmouseleave="hidePassword();" id="olho" class="toggle-password"/>
+            </div>
+            </br>
+                <p class="small mb-5 pb-lg-2"><a href="#!" class="link">Esqueceu a senha?</a></p>     
+            </br>
+            <button type="submit" id="button" class="btn">Entrar</button>
+        </form>
+    </div>
+    <div class="container-form sign-in">
+        <form class="formulario">
+            <h2 class="create-account">Cadastre-se com</h2>
+            <div class="icones">
+                <div id="buttonDiv" class="icon border-icon">
+                    <div id="g_id_onload"
+                    data-client_id="195425938133-8v67o5h10152ol0bkkgvqsnfb9uupjsn.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-callback="handleCredentialResponse"
+                    data-itp_support="true">
+               </div>
+               
+               <div class="g_id_signin"
+                    data-type="icon"
+                    data-shape="circle"
+                    data-theme="filled_black"
+                    data-text="continue_with"
+                    data-size="large">
+               </div>
+                </div> 
+                <div class="border-icon" >    
+                    <i class="ic"><img src="assets/instagram-icone-icon-5.png"  class="icon"></i>   
+                </div>
+                <div class="border-icon " >
+                    <i class="ic"><img src="assets/icon-face.png" class="icon"></i>
+                </div>
+            </div>
+            <p class="conta-gratis">Ou</p>
+            <div class="inputbox">
+                <input id="email" type="text" name="email" placeholder="Email" required/>
+            </div>
+            <div class="inputbox">
+                <input id="user" type="text" name="user" placeholder="Nome de usuário" required/>
+            </div>
+            <div class="input-container inputbox">
+                <input id="pass" type="password" name="senha" placeholder="Senha" required/>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWdJREFUSEvtlP8xBEEUhL+LABEgAkSACMgAEZABIkAEyMBFgAgQATIQgvrOG/V2btZeqdr/bqq29sfMdvfr1zMTRh6TkfFZEgw6PGTRKnAAHAM+bwfiK/AF3AHTeG6S9REIdgpcDEr8WeC6mxZRi0Dwx6T2HniK6yMIN4C9uI5SVfs1SU0g+HvY8RbWaMdfQ9u0agtwbYekJlDpLiC4CvXZIfEVcAhsNqxw3n8l8S7JbGQCG3kLfIY9Bdx1KixWrPU0VRIrWAdO4p8Ogf52JpMvkq3EuwoF8FsW4XQRKZaV/oug8Fqpzc4juzCba1kk+06lzhieV2CXVYy16CVImxb5f2nyXBoCTIWlJ3mP5Gg/R0DmmlzSUhrlXSWLxNRwGNc6fc3TNEeuqLUyleWNZpyNcqlqDrzuQbZYkrOG730bzn5cL3pU1ERurnLYuZEcqrWah7jquP5iDJ2mfYoX/r4kGLRqdIu+AXh7VBkMPcgnAAAAAElFTkSuQmCC"
+                onclick="showPassword();" onmouseleave="hidePassword();" id="olho2" class="toggle-password"/>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" name="check" id="lembrarSenha" value="1">   
+                <label for="checkbox" style="padding: 5px;">Lembrar senha</label>
+            </div>
+            <button type="submit" id="button2" class="btn">Entrar</button>
+        </form>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bem vindo de novo!</h2>
+                <p>Já possui uma conta? Clique aqui!</p>
+                <button class="sign-in-btn">Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/scripts.js"></script>
+</body>
+
+</html>
